@@ -50,4 +50,4 @@ Curious, analytical, and always eager to learn.
 - **Interactive Elements**: JavaScript-powered UI for smooth navigation.
 - **Optimized for Recruiters**: Quick access to my resume, LinkedIn, and project demos.
 
-![Contact Information](assets/contact.svg)
+**Do not hesitate to contact me for any question or opportunity!**

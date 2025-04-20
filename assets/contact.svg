@@ -5,62 +5,69 @@
             <stop offset="0%" style="stop-color:#0a192f;stop-opacity:1" />
             <stop offset="100%" style="stop-color:#112240;stop-opacity:1" />
         </linearGradient>
+        
+        <!-- Button gradient -->
+        <linearGradient id="buttonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#233554;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#2a4064;stop-opacity:1" />
+        </linearGradient>
     </defs>
 
     <!-- Background -->
     <rect width="800" height="200" fill="url(#contactGradient)"/>
 
     <!-- Title -->
-    <text x="400" y="50" font-family="Arial" font-size="32" fill="#ccd6f6" font-weight="bold" text-anchor="middle">
+    <text x="50" y="50" font-family="Arial" font-size="30" fill="#ccd6f6" font-weight="bold">
         Contact Me
     </text>
     
     <!-- Contact container -->
-    <rect x="100" y="70" width="600" height="110" fill="#1e2d3d" rx="10"/>
+    <rect x="50" y="70" width="700" height="110" rx="10" fill="#1e2d3d"/>
     
     <!-- Email section -->
     <g>
         <!-- Email button -->
-        <rect x="120" y="90" width="260" height="60" rx="8" fill="#233554">
-            <animate attributeName="fill" values="#233554;#2a4064;#233554" dur="3s" repeatCount="indefinite"/>
+        <rect x="70" y="90" width="320" height="60" rx="8" fill="url(#buttonGradient)">
+            <animate attributeName="opacity" values="1;0.8;1" dur="3s" repeatCount="indefinite"/>
         </rect>
         
-        <!-- Email icon - clearer envelope design -->
-        <rect x="140" y="105" width="30" height="30" fill="#64ffda" rx="4"/>
-        <path d="M140 105 L170 105 L155 117 Z" fill="#0a192f"/>
-        <path d="M140 105 L170 105 L170 135 L140 135 Z" fill="none" stroke="#0a192f" stroke-width="2"/>
+        <!-- Email icon -->
+        <rect x="90" y="105" width="30" height="30" fill="#64ffda" rx="5"/>
+        <path d="M95 110 L115 122 L95 135" fill="none" stroke="#0a192f" stroke-width="2"/>
+        <path d="M115 122 L135 110" fill="none" stroke="#0a192f" stroke-width="2"/>
+        <path d="M95 110 L135 110 L135 135 L95 135 Z" fill="none" stroke="#0a192f" stroke-width="2"/>
         
         <!-- Email text -->
-        <text x="185" y="125" font-family="Arial" font-size="18" fill="#ffffff" font-weight="500">
-            salembien.tom@gmail.com
+        <text x="135" y="125" font-family="Arial" font-size="18" fill="#ffffff">
+            your.email@example.com
         </text>
     </g>
     
     <!-- LinkedIn section -->
     <g>
         <!-- LinkedIn button -->
-        <rect x="420" y="90" width="260" height="60" rx="8" fill="#233554">
-            <animate attributeName="fill" values="#233554;#2a4064;#233554" dur="3s" repeatCount="indefinite" begin="1s"/>
+        <rect x="410" y="90" width="320" height="60" rx="8" fill="url(#buttonGradient)">
+            <animate attributeName="opacity" values="1;0.8;1" dur="3s" repeatCount="indefinite" begin="1s"/>
         </rect>
         
-        <!-- LinkedIn icon - recognizable "in" -->
-        <rect x="440" y="105" width="30" height="30" fill="#64ffda" rx="4"/>
-        <text x="448" y="128" font-family="Arial" font-size="22" fill="#0a192f" font-weight="bold">in</text>
+        <!-- LinkedIn icon -->
+        <rect x="430" y="105" width="30" height="30" fill="#64ffda" rx="5"/>
+        <text x="437" y="127" font-family="Arial" font-size="20" fill="#0a192f" font-weight="bold">in</text>
         
         <!-- LinkedIn text -->
-        <text x="485" y="125" font-family="Arial" font-size="18" fill="#ffffff" font-weight="500">
-            LinkedIn Profile
+        <text x="475" y="125" font-family="Arial" font-size="18" fill="#ffffff">
+            linkedin.com/in/yourprofile
         </text>
     </g>
     
-    <!-- Pulse animation for the entire contact area -->
-    <rect x="100" y="70" width="600" height="110" fill="none" stroke="#64ffda" stroke-width="2" rx="10" opacity="0.3">
-        <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" repeatCount="indefinite"/>
-        <animate attributeName="stroke-width" values="2;3;2" dur="4s" repeatCount="indefinite"/>
-    </rect>
+    <!-- Decorative elements -->
+    <rect x="50" y="70" width="700" height="110" rx="10" fill="none" stroke="#64ffda" stroke-width="1" opacity="0.3"/>
     
-    <!-- Interactive message -->
-    <text x="400" y="170" font-family="Arial" font-size="16" fill="#64ffda" text-anchor="middle">
-        Let's connect and discuss opportunities!
-    </text>
+    <!-- Soft interactive glow -->
+    <rect x="70" y="90" width="320" height="60" rx="8" fill="#64ffda" opacity="0" filter="blur(8px)">
+        <animate attributeName="opacity" values="0;0.1;0" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="410" y="90" width="320" height="60" rx="8" fill="#64ffda" opacity="0" filter="blur(8px)">
+        <animate attributeName="opacity" values="0;0.1;0" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+    </rect>
 </svg> 

@@ -3,32 +3,46 @@
     <!-- Background gradient -->
     <defs>
         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#2b5876;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#4e4376;stop-opacity:1" />
+            <stop offset="0%" style="stop-color:#0a192f;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#112240;stop-opacity:1" />
         </linearGradient>
         
-        <!-- Animated circle pattern -->
-        <pattern id="circles" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
-            <circle cx="25" cy="25" r="2" fill="#ffffff" opacity="0.3">
-                <animate attributeName="r" values="2;4;2" dur="3s" repeatCount="indefinite"/>
-                <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
-            </circle>
-        </pattern>
+        <!-- Progress bar animation -->
+        <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#64ffda;stop-opacity:0.8" />
+            <stop offset="100%" style="stop-color:#64ffda;stop-opacity:0.2" />
+        </linearGradient>
     </defs>
 
     <!-- Main background -->
     <rect width="800" height="200" fill="url(#gradient)"/>
     
-    <!-- Animated circles background -->
-    <rect width="800" height="200" fill="url(#circles)"/>
+    <!-- Header container -->
+    <rect x="50" y="50" width="700" height="120" rx="10" fill="#1e2d3d"/>
     
-    <!-- Text -->
-    <text x="50" y="100" font-family="Arial" font-size="40" fill="white" font-weight="bold">
+    <!-- Main title -->
+    <text x="80" y="100" font-family="Arial" font-size="40" fill="#ffffff" font-weight="bold">
         Data Science Portfolio
     </text>
     
-    <!-- Animated line -->
-    <line x1="50" y1="110" x2="350" y2="110" stroke="white" stroke-width="3">
-        <animate attributeName="x2" values="50;350;50" dur="4s" repeatCount="indefinite"/>
-    </line>
+    <!-- Subtitle -->
+    <text x="80" y="130" font-family="Arial" font-size="18" fill="#ccd6f6">
+        Machine Learning • Data Engineering • Visualization
+    </text>
+    
+    <!-- Animated underline -->
+    <rect x="80" y="145" width="0" height="3" fill="url(#progressGradient)" rx="1.5">
+        <animate attributeName="width" values="0;550;550" dur="2s" fill="freeze" />
+    </rect>
+    
+    <!-- Decorative elements -->
+    <circle cx="700" cy="80" r="20" fill="#64ffda" opacity="0.1">
+        <animate attributeName="r" values="20;25;20" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="120" r="15" fill="#64ffda" opacity="0.1">
+        <animate attributeName="r" values="15;20;15" dur="4s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    <circle cx="680" cy="150" r="10" fill="#64ffda" opacity="0.1">
+        <animate attributeName="r" values="10;15;10" dur="4s" repeatCount="indefinite" begin="2s"/>
+    </circle>
 </svg> 
