@@ -13,7 +13,7 @@ Curious, analytical, and always eager to learn.
 
 ## <span style="color:#64ffda">🌐 Live Portfolio</span>
 
-[Visit My Portfolio](https://ohm-t.github.io/devportfolio/)
+[Visit My Portfolio](https://tomsohm.github.io/devportfolio/)
 
 ## <span style="color:#64ffda">Tech Stack</span>
 
