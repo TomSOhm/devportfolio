@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://ajax.googleapis.com/ajax/libs/jquery/ https://cdnjs.cloudflare.com/; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdnjs.cloudflare.com/; font-src 'self' https://fonts.gstatic.com/ https://cdnjs.cloudflare.com/; img-src 'self' data: https:; connect-src 'self';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <title>Tom Salembien | Data Scientist</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <ul id="menu" class="shadow">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="lead">
+        <div id="lead-content">
+            <div class="welcome-wrapper">
+                <span class="wave">👋</span>
+                <div class="welcome-text">
+                    <span class="greeting">Hi there, I'm</span>
+                </div>
+            </div>
+            <h1>Tom Salembien</h1>
+            <h2>Data Scientist & Machine Learning Engineer</h2>
+            <p class="lead-description">
+                Curious Data Science Engineer with expertise in machine learning, deep learning, and data analysis. Currently working at Research and Innovation department of Richemont Switzerland.
+            </p>
+            <div class="cta-buttons">
+                <a href="cv_tom_25.pdf" class="btn-rounded-white">Download CV</a>
+                <button class="btn-contact" onclick="openContactModal()">Let's Talk</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal with Enhanced Security -->
+    <div id="contactModal" class="modal" role="dialog" aria-labelledby="contactModalTitle" aria-modal="true">
+        <div class="modal-content">
+            <span class="close-modal" aria-label="Close modal">&times;</span>
+            <h2 id="contactModalTitle">Get In Touch</h2>
+            <p>Feel free to reach out! I'll get back to you as soon as possible.</p>
+            <form id="contactForm" onsubmit="return validateAndSendEmail(event)" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required 
+                           maxlength="50" 
+                           pattern="^[a-zA-Z0-9\s\-']{2,50}$"
+                           aria-required="true">
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required 
+                           maxlength="100"
+                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                           aria-required="true">
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required 
+                           maxlength="100"
+                           pattern="^[a-zA-Z0-9\s\-',.!?]{2,100}$"
+                           aria-required="true">
+                    <span class="error-message" id="subjectError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required 
+                              maxlength="1000"
+                              aria-required="true"></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="experience" class="section">
+        <div class="container">
+            <h2 class="heading">Experiences</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-image">
+                        <img src="images/image_fx_ric3.jpg" alt="AI/ML Engineering at Richemont" />
+                    </div>
+                    <div class="experience-header">
+                        <h3>AI/ML Engineer</h3>
+                        <span class="company">Richemont, Research and Innovation</span>
+                        <span class="date">October 2023 – Now</span>
+                    </div>
+                    <ul>
+                        <li>Development of AI/ML solutions for luxury applications</li>
+                        <li>Research and implementation of computer vision and deep learning models</li>
+                        <li>Optimization of ML pipelines and deployment strategies</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-image">
+                        <img src="images/image_fx_ric2.jpg" alt="Computer Vision Research at Richemont" />
+                    </div>
+                    <div class="experience-header">
+                        <h3>Computer Vision Scientist Intern</h3>
+                        <span class="company">Richemont, Research and Innovation</span>
+                        <span class="date">April 2023 – October 2023</span>
+                    </div>
+                    <ul>
+                        <li>Research and development of computer vision algorithms</li>
+                        <li>Implementation of deep learning models for image analysis</li>
+                        <li>Optimization of model performance and deployment</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-image">
+                        <img src="images/image_fx_bracco2.jpg" alt="Data Science at Bracco Switzerland" />
+                    </div>
+                    <div class="experience-header">
+                        <h3>Data Scientist Intern</h3>
+                        <span class="company">Bracco Switzerland</span>
+                        <span class="date">June 2022 – August 2022</span>
+                    </div>
+                    <ul>
+                        <li>Data cleaning, processing and preparation on contrast ultrasound images</li>
+                        <li>Training of deep neural networks for the classification of liver lessions images</li>
+                        <li>Evaluation and analysis of results, optimization of the models</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-image">
+                        <img src="images/image_fx_inria_clean.png" alt="Software Development at LIRMM" />
+                    </div>
+                    <div class="experience-header">
+                        <h3>Software Developer</h3>
+                        <span class="company">Inria, Lirmm - Graphik Team</span>
+                        <span class="date">July 2021 – August 2021</span>
+                    </div>
+                    <ul>
+                        <li>Study of Knowledge Representation and Representation mathematical formalism, working mainly on LIRMM specialized tool named Graal</li>
+                        <li>Built Python/Java programming interface to the Graal platform using py4J</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects" class="section background-alt">
+        <div class="container">
+            <h2 class="heading">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <div class="project-image">
+                        <img src="images/image_fx_kering.jpg" alt="Supply Chain Optimization Dashboard" />
+                    </div>
+                    <div class="project-info">
+                        <h3>Capstone Project with Kering</h3>
+                        <p>Define a rule to replenish the regional warehouse from the central warehouse, and the stores from the regional warehouse that, for a given percentage of missing sales, minimize the average stock along the period.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Data Analysis</span>
+                            <span>Optimization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-image">
+                        <img src="images/image_fx_bovineembryo.jpg" alt="Machine Learning Pipeline for Embryo Analysis" />
+                    </div>
+                    <div class="project-info">
+                        <h3>Bovine Embryo Survival Prediction</h3>
+                        <p>Developed a machine learning pipeline for predicting the developmental state of bovine embryos at 192 hours after fertilisation (HAF).</p>
+                        <div class="project-tech">
+                            <span>Machine Learning</span>
+                            <span>Data Science</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="skills" class="section">
+        <div class="container">
+            <h2 class="heading">Technical Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>Machine Learning</li>
+                <li>Deep Learning</li>
+                <li>PyTorch</li>
+                <li>TensorFlow</li>
+                <li>Computer Vision</li>
+                <li>NLP</li>
+                <li>SQL</li>
+                <li>Data Analysis</li>
+                <li>Time Series</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="contact" class="section">
+        <div class="container">
+            <h2 class="heading clickable" onclick="openContactModal()">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>I'm currently open to new opportunities and collaborations. Feel free to reach out!</p>
+                    <div class="contact-links">
+                        <button onclick="handleEmailClick()" class="contact-link">
+                            <i class="fas fa-envelope"></i> Email Me
+                        </button>
+                        <a href="https://www.linkedin.com/in/tom-salembien-bb803b215/" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/TomSOhm" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="current-year">2024</span> Tom Salembien. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script>
+        // Email protection - Encode the email address
+        const encodedEmailChars = [115, 97, 108, 101, 109, 98, 105, 101, 110, 46, 116, 111, 109, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109];
+        
+        function getDecodedEmail() {
+            return String.fromCharCode(...encodedEmailChars);
+        }
+
+        function handleEmailClick() {
+            window.location.href = `mailto:${getDecodedEmail()}`;
+        }
+
+        // Input sanitization function
+        function sanitizeInput(input) {
+            return input.replace(/[<>&"']/g, function (match) {
+                const entities = {
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '&': '&amp;',
+                    '"': '&quot;',
+                    "'": '&#x27;'
+                };
+                return entities[match];
+            });
+        }
+
+        // Form validation function
+        function validateAndSendEmail(event) {
+            event.preventDefault();
+            
+            // Reset error messages
+            document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+            
+            // Get form inputs
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const subject = document.getElementById('subject');
+            const message = document.getElementById('message');
+            
+            // Validate name
+            if (!name.value.trim() || !name.checkValidity()) {
+                document.getElementById('nameError').textContent = 'Please enter a valid name (2-50 characters, letters and spaces only)';
+                name.focus();
+                return false;
+            }
+            
+            // Validate email
+            if (!email.value.trim() || !email.checkValidity()) {
+                document.getElementById('emailError').textContent = 'Please enter a valid email address';
+                email.focus();
+                return false;
+            }
+            
+            // Validate subject
+            if (!subject.value.trim() || !subject.checkValidity()) {
+                document.getElementById('subjectError').textContent = 'Please enter a valid subject (2-100 characters)';
+                subject.focus();
+                return false;
+            }
+            
+            // Validate message
+            if (!message.value.trim() || message.value.length > 1000) {
+                document.getElementById('messageError').textContent = 'Please enter a message (max 1000 characters)';
+                message.focus();
+                return false;
+            }
+
+            // Sanitize inputs
+            const sanitizedName = sanitizeInput(name.value.trim());
+            const sanitizedEmail = sanitizeInput(email.value.trim());
+            const sanitizedSubject = sanitizeInput(subject.value.trim());
+            const sanitizedMessage = sanitizeInput(message.value.trim());
+            
+            // Create mailto link with sanitized data
+            const mailtoLink = `mailto:${getDecodedEmail()}?subject=${encodeURIComponent(sanitizedSubject)}&body=${encodeURIComponent(`Name: ${sanitizedName}\nEmail: ${sanitizedEmail}\n\n${sanitizedMessage}`)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Close modal and reset form
+            closeContactModal();
+            document.getElementById('contactForm').reset();
+            return false;
+        }
+
+        // Modal functionality with security enhancements
+        const modal = document.getElementById('contactModal');
+        const closeBtn = document.querySelector('.close-modal');
+        let isModalOpen = false;
+
+        function openContactModal() {
+            if (!isModalOpen) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+                isModalOpen = true;
+                
+                // Set focus to first input for accessibility
+                setTimeout(() => {
+                    document.getElementById('name').focus();
+                }, 100);
+            }
+        }
+
+        function closeContactModal() {
+            if (isModalOpen) {
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+                isModalOpen = false;
+                
+                // Reset form and error messages
+                document.getElementById('contactForm').reset();
+                document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+            }
+        }
+
+        // Event listeners with security checks
+        closeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeContactModal();
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeContactModal();
+            }
+        });
+
+        // Keyboard accessibility and security
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && isModalOpen) {
+                closeContactModal();
+            }
+        });
+
+        // Prevent form submission on enter key in input fields
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+
