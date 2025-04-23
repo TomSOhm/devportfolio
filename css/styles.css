@@ -17,12 +17,20 @@ body {
 
 /* Header and Navigation */
 header {
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 0 10px rgba(0,0,0,0.09);
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
     z-index: 1000;
-    padding: 25px 0;
+    padding: 20px 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 #menu {
@@ -30,20 +38,45 @@ header {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: flex-end;
-    padding-right: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+#menu li {
+    position: relative;
 }
 
 #menu li a {
     color: var(--heading-color);
     text-decoration: none;
-    padding: 0 20px;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 #menu li a:hover {
     color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+#menu li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+#menu li a:hover::after {
+    width: 100%;
 }
 
 /* Lead Section */
@@ -274,9 +307,18 @@ header {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
     #menu {
         flex-direction: column;
-        align-items: center;
+        gap: 1.2rem;
+    }
+
+    #menu li a {
+        font-size: 1rem;
+        padding: 0.3rem 0;
     }
     
     #lead-content h1 {
@@ -1082,5 +1124,55 @@ footer {
     .skills-category li {
         font-size: 0.85rem;
         padding: 0.4rem 0.8rem;
+    }
+}
+
+#scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#scroll-to-top:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#scroll-to-top i {
+    font-size: 20px;
+    line-height: 45px;
+}
+
+@media screen and (max-width: 768px) {
+    #scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    #scroll-to-top i {
+        font-size: 18px;
+        line-height: 40px;
     }
 }
