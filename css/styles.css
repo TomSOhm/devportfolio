@@ -577,8 +577,12 @@ footer {
 
 .project-tech {
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.7rem;
     margin-top: 1.5rem;
+    max-height: 120px;
+    overflow-y: auto;
+    align-items: flex-start;
 }
 
 .project-tech span {
@@ -588,6 +592,10 @@ footer {
     border-radius: 6px;
     font-size: 0.9rem;
     font-weight: 500;
+    word-break: break-word;
+    white-space: normal;
+    flex: 0 1 auto;
+    min-width: 0;
 }
 
 .contact-content {
@@ -678,6 +686,17 @@ footer {
     
     .welcome-text {
         padding: 6px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-tech {
+        max-height: 90px;
+        gap: 0.5rem;
+    }
+    .project-tech span {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.7rem;
     }
 }
 

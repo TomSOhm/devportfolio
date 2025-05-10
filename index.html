@@ -56,7 +56,7 @@
                 Curious Data Science Engineer with expertise in machine learning, deep learning, and data analysis. Currently working at Research and Innovation department of Richemont Switzerland.
             </p>
             <div class="cta-buttons">
-                <a href="cv_tom_25.pdf" class="btn-rounded-white">Download CV</a>
+                <a href="pdf/cv_tom_25.pdf" class="btn-rounded-white">Download CV</a>
                 <button class="btn-contact" onclick="openContactModal()">Let's Talk</button>
             </div>
         </div>
@@ -206,14 +206,56 @@
                     </div>
                     <div class="project-info">
                         <h3>Capstone Project with Kering</h3>
-                        <p>Define a rule to replenish the regional warehouse from the central warehouse, and the stores from the regional warehouse that, for a given percentage of missing sales, minimize the average stock along the period.</p>
+                        <p>Worked on optimizing supply chain replenishment strategies for a major luxury retailer. Explored both statistical and reinforcement learning methods to define rules for replenishing regional warehouses from the central warehouse, and stores from the regional warehouse, aiming to minimize average stock while controlling for missing sales. The project involved:
+                        <ul>
+                            <li><b>Statistical Modeling:</b> Developed and evaluated rule-based and probabilistic models for inventory management.</li>
+                            <li><b>Reinforcement Learning:</b> Implemented RL algorithms to learn dynamic replenishment policies that adapt to sales patterns and stock levels.</li>
+                            <li><b>Data Analysis & Simulation:</b> Analyzed historical sales and stock data, and simulated various replenishment scenarios to assess performance.</li>
+                        </ul>
+                        This project provided hands-on experience in supply chain analytics, statistical modeling, and the application of reinforcement learning to real-world business problems.</p>
                         <div class="project-tech">
-                            <span>Python</span>
+                            <span>Supply Chain Optimization</span>
+                            <span>Statistical Modeling</span>
+                            <span>Reinforcement Learning</span>
+                            <span>Simulation</span>
                             <span>Data Analysis</span>
-                            <span>Optimization</span>
+                            <span>Python</span>
                         </div>
                     </div>
                 </div>
+
+                <div class="project">
+                    <div class="project-image">
+                        <img src="images/image_fx_altegrad_2.jpg" alt="Protein Classification Challenge" />
+                    </div>
+                    <div class="project-info">
+                        <h3>Protein Classification Challenge</h3>
+                        <p>Led a comprehensive bioinformatics project to classify proteins into 18 functional categories using both their amino acid sequences and 3D structural graphs. I experimented with advanced machine learning and deep learning models, including:
+                        <ul>
+                            <li><b>Hierarchical Graph Pooling with Structural Learning (HGP-SL):</b> Captured global graph structure for improved message passing and protein representation.</li>
+                            <li><b>Fusion Model (GNN + MLP):</b> Combined graph-based structural features and sequence-based embeddings for robust classification.</li>
+                            <li><b>CNN & LSTM Fusion:</b> Extracted local and long-range dependencies from protein sequences using deep learning.</li>
+                            <li><b>CountVectorizer + Logistic Regression:</b> Established strong baselines with n-gram encoding and interpretable models.</li>
+                        </ul>
+                        This project strengthened my expertise in graph neural networks, model fusion, feature engineering, and the integration of biological data for real-world applications.</p>
+                        <div class="project-tech">
+                            <span>Graph Neural Networks</span>
+                            <span>Hierarchical Graph Pooling</span>
+                            <span>Deep Learning</span>
+                            <span>CNN</span>
+                            <span>LSTM</span>
+                            <span>MLP</span>
+                            <span>Logistic Regression</span>
+                            <span>CountVectorizer</span>
+                            <span>TFIDF</span>
+                            <span>Feature Engineering</span>
+                            <span>Bioinformatics</span>
+                            <span>Python</span>
+                            <span>PyTorch</span>
+                        </div>
+                    </div>
+                </div>
+
 
                 <div class="project">
                     <div class="project-image">
@@ -221,14 +263,80 @@
                     </div>
                     <div class="project-info">
                         <h3>Bovine Embryo Survival Prediction</h3>
-                        <p>Developed a machine learning pipeline for predicting the developmental state of bovine embryos at 192 hours after fertilisation (HAF).</p>
+                        <p>Developed a deep learning pipeline to predict the developmental state of bovine embryos at 192 hours after fertilisation (HAF) using time-lapse video data. The approach involved:
+                        <ul>
+                            <li><b>Frame Extraction:</b> Selected key frames from embryo development videos at specific time points for analysis.</li>
+                            <li><b>CNN + LSTM Architecture:</b> Used a ResNet-based convolutional neural network to extract features from each frame, followed by an LSTM to model temporal dynamics across frames.</li>
+                            <li><b>PyTorch Implementation:</b> Built custom PyTorch datasets and training loops, leveraging transfer learning and sequence modeling for robust classification.</li>
+                        </ul>
+                        This project provided hands-on experience in video-based deep learning, temporal modeling, and practical application of neural networks for biomedical prediction tasks.</p>
                         <div class="project-tech">
-                            <span>Machine Learning</span>
-                            <span>Data Science</span>
+                            <span>Deep Learning</span>
+                            <span>Video Analysis</span>
+                            <span>CNN</span>
+                            <span>LSTM</span>
+                            <span>PyTorch</span>
+                            <span>Transfer Learning</span>
+                            <span>Sequence Modeling</span>
+                            <span>Biomedical AI</span>
                             <span>Python</span>
                         </div>
                     </div>
                 </div>
+
+                <div class="project">
+                    <div class="project-image">
+                        <img src="images/image_fx_datastream_2.jpg" alt="Trading Stocks Market Prediction" />
+                    </div>
+                    <div class="project-info">
+                        <h3>Trading Stocks Market Prediction</h3>
+                        <p> Collect trading data using Yahoo finance API, Kafka, Hadoop, (Spark, Cassandra) and different online prediction methods (using river or other tools) to predict markets stocks of global companies.
+                            For several countries, we used major industries stock data (US Google and Apple, France BNP Paribas, China Alibaba, Switzerland Novartis).
+                            We compared the performances of online methods with batch regression models (LSTM and autoregressive model). We finally concluded on the performances on recent stock market data.</p>
+                        <div class="project-tech">
+                            <span>Kafka</span>
+                            <span>Hadoop</span>
+                            <span>Spark</span>
+                            <span>Cassandra</span>
+                            <span>ETL</span>
+                            <span>Machine Learning</span>
+                            <span>Time Series</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-image">
+                        <img src="images/image_fx_cassiope_3.jpg" alt="Machine Learning for Detection of Early-Stage
+                        Parkinson using Gait Analysis"/>
+                    </div>
+                    <div class="project-info">
+                        <h3>Machine Learning for Detection of Early-Stage Parkinson using Gait Analysis</h3>
+                        <p>Explored machine learning algorithms to detect early-stage Parkinson's disease using gait analysis data. The project involved:
+                        <ul>
+                            <li><b>Data Collection & Cleaning:</b> Integrated and preprocessed multiple public datasets, ensuring high-quality input for modeling.</li>
+                            <li><b>Modeling:</b> Explored and compared several models, including Random Forest, XGBoost, Feed-Forward Neural Networks (FFNN), and Variational Autoencoders, to capture both linear and complex non-linear patterns in gait data.</li>
+                            <li><b>Explainable AI (XAI):</b> Applied XAI techniques to interpret Random Forest predictions, providing transparency and actionable insights for clinical use.</li>
+                            <li><b>Evaluation & Stratification:</b> Conducted thorough model evaluation, comparison, and patient stratification to assess diagnostic performance and generalizability.</li>
+                        </ul>
+                        This project deepened my expertise in medical data science, advanced machine learning, and explainable AI for healthcare applications.</p>
+                        <div class="project-tech">
+                            <span>Machine Learning</span>
+                            <span>Data Science</span>
+                            <span>Data Cleaning</span>
+                            <span>Random Forest</span>
+                            <span>XGBoost</span>
+                            <span>Feed-Forward Neural Network</span>
+                            <span>Variational Autoencoder</span>
+                            <span>Explainable AI (XAI)</span>
+                            <span>Model Evaluation</span>
+                            <span>Stratification</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
