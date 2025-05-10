@@ -17,7 +17,7 @@ Curious, analytical, and always eager to learn.
 
 ## <span style="color:#64ffda">Tech Stack</span>
 
-![My Skills](assets/skills.svg)
+# ![My Skills](assets/skills.svg)
 
 ### <span style="color:#64ffda">Technical Expertise</span>
 
