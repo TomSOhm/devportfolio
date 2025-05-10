@@ -247,7 +247,7 @@ header {
 #contact {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
-    padding: 100px 0;
+    padding: 50px 0;
     text-align: center;
 }
 
